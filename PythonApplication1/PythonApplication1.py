@@ -100,6 +100,7 @@ sql_list = []
 i = 0
 #data = df[0:]
 #global text
+global text
 for i in range(len(arr)):
 	#print (arr[i])
 	print('************')
@@ -107,7 +108,7 @@ for i in range(len(arr)):
 	#c.pCol()
 	for j in range(len(arr[i])):
 	   #print(arr[i][j])
-	   global text
+	   
 	   text = arr[i][j]
 	   #text = None
 	   #print(j)
@@ -116,13 +117,13 @@ for i in range(len(arr)):
 	   #c.xuexiao = '123'
 	   #c.qu = '123'
 	   if j==0:
-		   c.sheng = text
+	       c.sheng = text
 	   elif j==1:
-		   c.shi = text
+	       c.shi = text
 	   elif j==2:
-		   c.qu = text
+	       c.qu = text
 	   elif j==3:
-		   c.xuexiao = text
+	       c.xuexiao = text
 	  # if j == 0:
 			#print(arr[i][j])
 			#c.sheng = text
