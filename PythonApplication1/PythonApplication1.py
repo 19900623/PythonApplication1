@@ -82,12 +82,17 @@ class Col(object):
 #取哪行
 list = [0,1,2,3,5]
 np = pd.read_csv('school.csv',index_col=0,usecols=list)
+
+area = pd.read_csv('base_area1.csv',index_col=0,usecols=[0,1,4])
+
+#print(area)
 #data =
 #DataFrame(np.arange(16).reshape(4,4),index=list('abcd'),columns=list('wxyz'))
 #ser = Series(np.arange(3.))
 
 #print(np.values)
 arr = np.values
+arr2 = area.values
 #sql=df.to_csv('school.csv',index=False,encoding='utf-8')
 sql_list = []
 #for i in df:
@@ -100,40 +105,53 @@ sql_list = []
 i = 0
 #data = df[0:]
 #global text
-global text
-for i in range(len(arr)):
+print(area.values)
+for i in range(len(arr2)):
 	#print (arr[i])
-	print('************')
-	c = Col()
 	#c.pCol()
-	for j in range(len(arr[i])):
-	   #print(arr[i][j])
+	for j in range(len(arr2[i])):
+		if j==0:
+			print(arr2[i][j])
+		elif j==1:
+			print(arr2[i][j])
+	#print('************')
+#global text
+#for i in range(len(arr)):
+#	#print (arr[i])
+#	print('************')
+#	c = Col()
+#	#c.pCol()
+#	for j in range(len(arr[i])):
+#	   #print(arr[i][j])
 	   
-	   text = arr[i][j]
-	   #text = None
-	   #print(j)
-	   #c.sheng = text
-	   #c.shi = '123'
-	   #c.xuexiao = '123'
-	   #c.qu = '123'
-	   if j==0:
-	       c.sheng = text
-	   elif j==1:
-	       c.shi = text
-	   elif j==2:
-	       c.qu = text
-	   elif j==3:
-	       c.xuexiao = text
-	  # if j == 0:
-			#print(arr[i][j])
-			#c.sheng = text
-	  # elif j == 1:
-			#c.shi = text
-	  # elif j == 2:
-			#c.shi = text
-	  # elif j == 3:
-			#c.xuexiao = text
-	c.pCol()
+#	   text = arr[i][j]
+#	   if j==0:
+#	       c.sheng = text
+#	   elif j==1:
+#	       c.shi = text
+#	   elif j==2:
+#	       c.qu = text
+#	   elif j==3:
+#	       c.xuexiao = text
+#	c.pCol()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     #data.append(list(line.strip().split(',')))
 	#print('行:',i)
 	#col=data[index:index+1]
