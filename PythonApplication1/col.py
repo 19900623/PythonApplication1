@@ -12,7 +12,8 @@ class Col(object):
    #     for k,w in kw.iteritems():
 			#setattr(self,k,w)
      def __init__(self):
-          print("********")
+         pass
+          #print("********")
 
    #def __init__(self, sheng, shi, qu, xuexiao):
 	  #self.qu = qu
